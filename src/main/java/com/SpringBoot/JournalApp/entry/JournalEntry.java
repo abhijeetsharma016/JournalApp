@@ -12,6 +12,19 @@ public class JournalEntry {
 
     @Id
     private ObjectId id;
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
     private String title;
     private String content;
     private LocalDateTime date;
