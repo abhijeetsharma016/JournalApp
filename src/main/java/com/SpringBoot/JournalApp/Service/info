@@ -1,0 +1,3 @@
+In service we write business logic
+
+controller --> service --> repo

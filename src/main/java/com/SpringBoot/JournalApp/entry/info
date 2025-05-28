@@ -1,0 +1,3 @@
+in entry we write code to work and store data
+
+controller --> service --> repo

@@ -1,0 +1,3 @@
+in controller we define end points for api
+
+controller --> service --> repo
