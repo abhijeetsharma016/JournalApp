@@ -1,40 +1,43 @@
 package com.SpringBoot.JournalApp.Service;
 
-import com.SpringBoot.JournalApp.entry.JournalEntry;
-import com.SpringBoot.JournalApp.repositor.JournalEntryRepository;
+import com.SpringBoot.JournalApp.entry.User;
 import com.SpringBoot.JournalApp.repositor.UserRepository;
 import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
 
-//controller -->service ---> repository
-
-@Component
+@Service
 public class UserService {
 
-    @Autowired //when we run spring generate an interface specially for us
+    @Autowired
     private UserRepository userRepository;
 
-    public void saveEntry(JournalEntry journalEntry){
-        userRepository.save(journalEntry);
+    public User saveUser(User user) {
+        return userRepository.save(user);
     }
 
-    public List<JournalEntry> getAll(){
+    public List<User> getAll() {
         return userRepository.findAll();
     }
 
-    public Optional<JournalEntry> findById(ObjectId id){
+    public Optional<User> findById(ObjectId id) {
         return userRepository.findById(id);
     }
 
-    public void deleteByid(ObjectId id){
+    public User findByUserName(String userName) {
+        return userRepository.findByUserName(userName);
+    }
+
+    public void deleteById(ObjectId id) {
         userRepository.deleteById(id);
     }
 
+    @Transactional
+    public void deleteByUserName(String userName) {
+        userRepository.deleteByUserName(userName);
+    }
 }
-
-
-
