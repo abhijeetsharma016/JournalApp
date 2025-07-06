@@ -31,7 +31,7 @@ public class UserController {
         }
     }
 
-    @PutMapping("/{userName}")
+        @PutMapping("/{userName}")
     public ResponseEntity<?> updateUser(@PathVariable String userName, @RequestBody User user) {
         User userInDb = userService.findByUserName(userName);
         if (userInDb != null) {
