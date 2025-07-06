@@ -51,19 +51,19 @@ public class JournalEntryControllerV2 {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
     }
 
-    @DeleteMapping("/id/{myId}")
-    public ResponseEntity<Void> deleteJournalEntryById(@PathVariable ObjectId myId) {
+    @DeleteMapping("/id/{userName}/{myId}")
+    public ResponseEntity<Void> deleteJournalEntryById(@PathVariable ObjectId myId, @PathVariable String userName) {
         Optional<JournalEntry> existing = journalEntryService.findById(myId);
         if (existing.isPresent()) {
-            journalEntryService.deleteByid(myId);
+            journalEntryService.deleteByid(myId, userName);
             return new ResponseEntity<>(HttpStatus.NO_CONTENT); // 204 No Content for successful delete
         }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
-    @PutMapping("/id/{id}")
-    public ResponseEntity<JournalEntry> updateJournalById(@PathVariable ObjectId id, @RequestBody JournalEntry newEntry) {
-        /*Optional<JournalEntry> existing = journalEntryService.findById(id);
+    @PutMapping("/id/{userName}/{id}")
+    public ResponseEntity<JournalEntry> updateJournalById(@PathVariable ObjectId id, @RequestBody JournalEntry newEntry, @PathVariable String userName) {
+        Optional<JournalEntry> existing = journalEntryService.findById(id);
         if (existing.isPresent()) {
             JournalEntry old = existing.get();
 
@@ -73,9 +73,9 @@ public class JournalEntryControllerV2 {
             old.setContent(newEntry.getContent() != null && !newEntry.getContent().isEmpty()
                     ? newEntry.getContent() : old.getContent());
 
-            journalEntryService.saveEntry(old, user);
+            journalEntryService.saveEntry(old);
             return new ResponseEntity<>(old, HttpStatus.OK);
-        }*/
+        }
         return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 }
