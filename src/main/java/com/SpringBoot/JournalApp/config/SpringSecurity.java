@@ -1,7 +1,7 @@
 package com.SpringBoot.JournalApp.config;
 
 
-import net.engineeringdigest.journalApp.service.UserDetailsServiceImpl;
+import com.SpringBoot.JournalApp.Service.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.context.annotation.Bean;
