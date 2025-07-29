@@ -181,10 +181,6 @@ If you encounter any issues or have questions:
 2. Create a new issue if your problem isn't already reported
 3. Provide detailed information about the issue and steps to reproduce
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👨‍💻 Author
 
 **Abhijeet Sharma**
