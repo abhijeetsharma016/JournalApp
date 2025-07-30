@@ -1,6 +1,33 @@
 package com.SpringBoot.JournalApp.Service;
 
-public class WeatherService {
-    private static final String apiKey = "99232e8860b6a7e40a82413f1f9e22e1";
+import com.SpringBoot.JournalApp.api.response.WeatherResponse;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service; // Changed from @Component to @Service
+import org.springframework.web.client.RestTemplate;
 
+@Service
+public class WeatherService {
+    @Value("${weather.api.key}")
+    private String apiKey;
+
+    private static final String API = "http://api.weatherstack.com/current?access_key=API_KEY&query=CITY";
+
+    @Autowired
+    private RestTemplate restTemplate;
+
+    public WeatherResponse getWeather(String city) {
+        try {
+            String finalAPI = API.replace("CITY", city).replace("API_KEY", apiKey);
+            ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, WeatherResponse.class);
+            WeatherResponse body = response.getBody();
+            return body;
+        } catch (Exception e) {
+            // Log the exception if you have logging configured
+            // logger.error("Error fetching weather data for city: " + city, e);
+            return null; // Return null to handle gracefully in controller
+        }
+    }
 }

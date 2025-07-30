@@ -2,6 +2,7 @@ package com.SpringBoot.JournalApp.Controller;
 
 import com.SpringBoot.JournalApp.Service.UserService;
 import com.SpringBoot.JournalApp.Service.QuotesService;
+import com.SpringBoot.JournalApp.Service.WeatherService;
 import com.SpringBoot.JournalApp.entry.User;
 import com.SpringBoot.JournalApp.repositor.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +24,10 @@ public class UserController {
 
     @Autowired
     private QuotesService quotesService;
+
+    @Autowired
+    private WeatherService weatherService; // Inject WeatherService instead of static call
+
 
     @PutMapping
     public ResponseEntity<?> updateUser(@RequestBody User user) {
@@ -49,12 +54,27 @@ public class UserController {
 
         try {
             String quote = quotesService.getMotivationalQuote();
+            String weatherInfo = getWeatherInfo("Mumbai");
             String message = "Hi " + userName + "! Here's your daily motivation: " + quote;
-            return new ResponseEntity<>(message, HttpStatus.OK);
+            return new ResponseEntity<>(message + "\n" + weatherInfo, HttpStatus.OK);
         } catch (Exception e) {
-            // Fallback if quote service fails
-            String message = "Hi " + userName + "! (Quote service temporarily unavailable)";
+            // Fallback if services fail
+            String message = "Hi " + userName + "! (Quote and weather services temporarily unavailable)";
             return new ResponseEntity<>(message, HttpStatus.OK);
+        }
+    }
+
+    private String getWeatherInfo(String city) {
+        try {
+            var weatherResponse = weatherService.getWeather(city);
+            if (weatherResponse != null && weatherResponse.getCurrent() != null) {
+                int feelsLike = weatherResponse.getCurrent().getFeelslike();
+                return "Weather in " + city + " feels like: " + feelsLike + "°C";
+            } else {
+                return "Weather information unavailable for " + city;
+            }
+        } catch (Exception e) {
+            return "Weather service temporarily unavailable";
         }
     }
 }
