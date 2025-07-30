@@ -1,6 +1,7 @@
 package com.SpringBoot.JournalApp.Controller;
 
 import com.SpringBoot.JournalApp.Service.UserService;
+import com.SpringBoot.JournalApp.Service.QuotesService;
 import com.SpringBoot.JournalApp.entry.User;
 import com.SpringBoot.JournalApp.repositor.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private QuotesService quotesService;
+
     @PutMapping
     public ResponseEntity<?> updateUser(@RequestBody User user) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
@@ -36,5 +40,21 @@ public class UserController {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         userRepository.deleteByUserName(authentication.getName());
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+    }
+
+    @GetMapping
+    public ResponseEntity<?> greeting() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        String userName = authentication.getName();
+
+        try {
+            String quote = quotesService.getMotivationalQuote();
+            String message = "Hi " + userName + "! Here's your daily motivation: " + quote;
+            return new ResponseEntity<>(message, HttpStatus.OK);
+        } catch (Exception e) {
+            // Fallback if quote service fails
+            String message = "Hi " + userName + "! (Quote service temporarily unavailable)";
+            return new ResponseEntity<>(message, HttpStatus.OK);
+        }
     }
 }
