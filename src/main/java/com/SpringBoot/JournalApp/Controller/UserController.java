@@ -68,7 +68,7 @@ public class UserController {
         try {
             var weatherResponse = weatherService.getWeather(city);
             if (weatherResponse != null && weatherResponse.getCurrent() != null) {
-                int feelsLike = weatherResponse.getCurrent().getFeelslike();
+                int feelsLike = (int) weatherResponse.getCurrent().getFeelslike();
                 return "Weather in " + city + " feels like: " + feelsLike + "°C";
             } else {
                 return "Weather information unavailable for " + city;
