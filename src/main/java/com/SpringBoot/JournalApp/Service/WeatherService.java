@@ -1,5 +1,6 @@
 package com.SpringBoot.JournalApp.Service;
 
+import com.SpringBoot.JournalApp.Constants.Placeholders;
 import com.SpringBoot.JournalApp.api.response.WeatherResponse;
 import com.SpringBoot.JournalApp.cache.AppCache;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,7 +35,7 @@ public class WeatherService {
                 return null;
             }
 
-            String finalAPI = weatherApiTemplate.replace("<CITY>", city).replace("<API_KEY>", apiKey);
+            String finalAPI = weatherApiTemplate.replace(Placeholders.CITY, city).replace(Placeholders.API_KEY, apiKey);
             System.out.println("Making weather API call to: " + finalAPI.replace(apiKey, "***API_KEY***"));
 
             ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, WeatherResponse.class);

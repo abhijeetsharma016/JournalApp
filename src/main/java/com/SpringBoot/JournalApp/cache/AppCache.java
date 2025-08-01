@@ -16,10 +16,11 @@ public class AppCache {
     private ConfigJournalAppRepository configJournalAppRepository;
 
     // Initialize the static map
-    public static Map<String, String> APP_Cache = new HashMap<>();
+    public static Map<String, String> APP_Cache;
 
     @PostConstruct
     public void init(){
+        APP_Cache = new HashMap<>();
         try {
             List<ConfigJournalAppEntity> all = configJournalAppRepository.findAll();
             for(ConfigJournalAppEntity configJournalAppEntity: all){

@@ -1,6 +1,7 @@
 package com.SpringBoot.JournalApp.Controller;
 
 import com.SpringBoot.JournalApp.Service.UserService;
+import com.SpringBoot.JournalApp.cache.AppCache;
 import com.SpringBoot.JournalApp.entry.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,6 +13,9 @@ import java.util.List;
 @RestController
 @RequestMapping("/admin")
 public class AdminController {
+
+    @Autowired
+    private AppCache appCache;
 
     @Autowired
     private UserService userService;
@@ -28,6 +32,11 @@ public class AdminController {
     @PostMapping("/create-admin-user")
     public void createUser(@RequestBody User user) {
         userService.saveAdmin(user);
+    }
+
+    @GetMapping
+    public void clearAppCache(){
+        appCache.init();
     }
 
 }
