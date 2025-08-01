@@ -1,10 +1,10 @@
 package com.SpringBoot.JournalApp.repositor;
 
 import com.SpringBoot.JournalApp.entry.ConfigJournalAppEntity;
-import com.SpringBoot.JournalApp.entry.JournalEntry;
-import org.bson.types.ObjectId;
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-public interface ConfigJournalAppRepository extends MongoRepository<ConfigJournalAppEntity, ObjectId> {
-
+@Repository
+public interface ConfigJournalAppRepository extends MongoRepository<ConfigJournalAppEntity, String> {
+    // You can add custom query methods here if needed
 }
