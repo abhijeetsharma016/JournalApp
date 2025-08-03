@@ -4547,3 +4547,432 @@ Caused by: java.net.SocketTimeoutException: Read timed out
 04:44:43.044 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
 04:44:43.045 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["Hi raj! Here's your daily motivation: {"quote":"Imagination is the highest kite one can fly.","autho (truncated)..."]
 04:44:43.052 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 200 OK
+07:52:00.829 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:730)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+07:52:00.829 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:730)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+07:52:00.829 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:730)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+07:52:01.042 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:221)
+	at com.mongodb.internal.connection.ServerAddressWithResolver.getSocketAddresses(ServerAddressWithResolver.java:68)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:78)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:211)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: No such host is known (ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:213)
+	... 7 common frames omitted
+07:52:01.042 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:221)
+	at com.mongodb.internal.connection.ServerAddressWithResolver.getSocketAddresses(ServerAddressWithResolver.java:68)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:78)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:211)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: No such host is known (ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:213)
+	... 7 common frames omitted
+07:52:01.043 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketException: No such host is known (ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:221)
+	at com.mongodb.internal.connection.ServerAddressWithResolver.getSocketAddresses(ServerAddressWithResolver.java:68)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:78)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:211)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: No such host is known (ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52)
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:213)
+	... 7 common frames omitted
+14:19:04.980 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketException: ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:221)
+	at com.mongodb.internal.connection.ServerAddressWithResolver.getSocketAddresses(ServerAddressWithResolver.java:68)
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:100)
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:78)
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:211)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:193)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.UnknownHostException: ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net
+	at java.base/java.net.InetAddress$CachedLookup.get(InetAddress.java:988)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688)
+	at com.mongodb.ServerAddress.getSocketAddresses(ServerAddress.java:213)
+	... 7 common frames omitted
+14:19:05.128 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=86365500, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=688064cdaca27d2201bfc03a, counter=5}, lastWriteDate=Sat Aug 02 14:19:06 IST 2025, lastUpdateTimeNanos=144882281685800}
+14:19:05.128 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=91289500, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=6880639f11cd3b4f00e634f2, counter=5}, lastWriteDate=Sat Aug 02 14:19:06 IST 2025, lastUpdateTimeNanos=144882281685800}
+14:19:15.092 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=67043600, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000103, setVersion=290, topologyVersion=TopologyVersion{processId=6880629d5f6b6fb5635caf17, counter=9}, lastWriteDate=Sat Aug 02 14:19:16 IST 2025, lastUpdateTimeNanos=144892246730400}
+14:19:15.093 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 with max election id 7fffffff0000000000000103 and max set version 290
+14:41:18.737 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:728)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+14:41:18.887 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=92072400, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000103, setVersion=290, topologyVersion=TopologyVersion{processId=6880629d5f6b6fb5635caf17, counter=9}, lastWriteDate=Sat Aug 02 14:41:18 IST 2025, lastUpdateTimeNanos=146214346969400}
+14:41:18.888 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 with max election id 7fffffff0000000000000103 and max set version 290
+17:10:43.874 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:728)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+17:10:43.874 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:728)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+17:10:44.098 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=110102600, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=688064cdaca27d2201bfc03a, counter=5}, lastWriteDate=Sat Aug 02 17:10:43 IST 2025, lastUpdateTimeNanos=155179652356300}
+17:10:44.098 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=110101400, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=6880639f11cd3b4f00e634f2, counter=5}, lastWriteDate=Sat Aug 02 17:10:43 IST 2025, lastUpdateTimeNanos=155179652356300}
+17:10:44.349 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:728)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+17:10:44.497 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=86325600, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000103, setVersion=290, topologyVersion=TopologyVersion{processId=6880629d5f6b6fb5635caf17, counter=9}, lastWriteDate=Sat Aug 02 17:10:44 IST 2025, lastUpdateTimeNanos=155180051538400}
+17:10:44.497 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 with max election id 7fffffff0000000000000103 and max set version 290
+18:36:24.582 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:728)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+18:36:24.627 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:728)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+18:36:24.740 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=91438500, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=6880639f11cd3b4f00e634f2, counter=5}, lastWriteDate=Sat Aug 02 18:36:25 IST 2025, lastUpdateTimeNanos=160320390900500}
+18:36:24.799 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=105111700, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=688064cdaca27d2201bfc03a, counter=5}, lastWriteDate=Sat Aug 02 18:36:25 IST 2025, lastUpdateTimeNanos=160320450788500}
+18:36:25.163 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Exception in monitor thread while connecting to server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017
+com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:728)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:606)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:451)
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:404)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.lookupServerDescription(DefaultServerMonitor.java:221)
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitorRunnable.run(DefaultServerMonitor.java:153)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:278)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:304)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:175)
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:200)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:739)
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveMessageWithAdditionalTimeout(InternalStreamConnection.java:603)
+	... 5 common frames omitted
+18:36:25.313 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=93095000, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000103, setVersion=290, topologyVersion=TopologyVersion{processId=6880629d5f6b6fb5635caf17, counter=9}, lastWriteDate=Sat Aug 02 18:36:25 IST 2025, lastUpdateTimeNanos=160320964597100}
+18:36:25.313 [cluster-ClusterId{value='688d4a34cdf328747b7ebb37', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 with max election id 7fffffff0000000000000103 and max set version 290
+02:22:24.006 [main] INFO  c.S.JournalApp.JournalApplication - Starting JournalApplication using Java 21 with PID 1852 (C:\Users\abhij\OneDrive\Desktop\SpringBoot\JournalApp\target\classes started by abhij in C:\Users\abhij\OneDrive\Desktop\SpringBoot\JournalApp)
+02:22:24.013 [main] INFO  c.S.JournalApp.JournalApplication - The following 1 profile is active: "dev"
+02:22:25.286 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+02:22:25.387 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 3 MongoDB repository interfaces.
+02:22:26.135 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+02:22:26.155 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+02:22:26.159 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+02:22:26.159 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+02:22:26.241 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+02:22:26.243 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2148 ms
+02:22:26.657 [cluster-ClusterId{value='688fcc0a841df567a35aa30b', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017 to client view of cluster
+02:22:26.664 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21+35-2513"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='sharma016abhijeet', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7ba93755, com.mongodb.Jep395RecordCodecProvider@22dc59b2, com.mongodb.KotlinCodecProvider@33e434c8]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.iu00ie1.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-kf69ke-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+02:22:26.702 [cluster-ClusterId{value='688fcc0a841df567a35aa30b', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017 to client view of cluster
+02:22:26.707 [cluster-ClusterId{value='688fcc0a841df567a35aa30b', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 to client view of cluster
+02:22:27.558 [main] INFO  org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+02:22:27.759 [cluster-ClusterId{value='688fcc0a841df567a35aa30b', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=615583499, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=688064cdaca27d2201bfc03a, counter=5}, lastWriteDate=Mon Aug 04 02:22:29 IST 2025, lastUpdateTimeNanos=274689383582700}
+02:22:27.759 [cluster-ClusterId{value='688fcc0a841df567a35aa30b', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=615806500, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000103, setVersion=290, topologyVersion=TopologyVersion{processId=6880629d5f6b6fb5635caf17, counter=9}, lastWriteDate=Mon Aug 04 02:22:29 IST 2025, lastUpdateTimeNanos=274689383595200}
+02:22:27.759 [cluster-ClusterId{value='688fcc0a841df567a35aa30b', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=615802099, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=6880639f11cd3b4f00e634f2, counter=5}, lastWriteDate=Mon Aug 04 02:22:29 IST 2025, lastUpdateTimeNanos=274689383590300}
+02:22:27.771 [cluster-ClusterId{value='688fcc0a841df567a35aa30b', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 with max election id 7fffffff0000000000000103 and max set version 290
+02:22:28.906 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+02:22:29.087 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+02:22:29.217 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@49c83262, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@273aaab7, org.springframework.security.web.context.SecurityContextHolderFilter@30eedaa4, org.springframework.security.web.header.HeaderWriterFilter@7ea3839e, org.springframework.web.filter.CorsFilter@77bb916f, org.springframework.security.web.authentication.logout.LogoutFilter@2905b568, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@76b305e1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f6b57f2, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@144ee8a7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5a48d186, org.springframework.security.web.access.ExceptionTranslationFilter@21b744ec, org.springframework.security.web.access.intercept.AuthorizationFilter@51132514]
+02:22:29.433 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+02:22:29.534 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+02:22:29.700 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+02:22:29.740 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+02:22:29.753 [main] INFO  c.S.JournalApp.JournalApplication - Started JournalApplication in 6.458 seconds (process running for 7.403)
+02:24:27.494 [http-nio-8080-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+02:24:27.494 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+02:24:27.495 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+02:24:27.495 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected AcceptHeaderLocaleResolver
+02:24:27.495 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected FixedThemeResolver
+02:24:27.498 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@532f1c16
+02:24:27.499 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2d6ddc5
+02:24:27.499 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+02:24:27.500 [http-nio-8080-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+02:24:27.537 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Securing POST /public/create-user
+02:24:27.547 [http-nio-8080-exec-2] DEBUG o.s.security.web.FilterChainProxy - Secured POST /public/create-user
+02:24:27.549 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - POST "/public/create-user", parameters={}
+02:24:27.552 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.SpringBoot.JournalApp.Controller.PublicController#createUser(User)
+02:24:27.762 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Read "application/json;charset=UTF-8" to [User(id=null, userName=Raju, email=null, sentimentAnalysis=false, password=123, journalEntries=[], r (truncated)...]
+02:24:27.777 [http-nio-8080-exec-2] INFO  c.S.JournalApp.Service.UserService - Finding user by username: Raju
+02:24:27.829 [http-nio-8080-exec-2] INFO  c.S.JournalApp.Service.UserService - Attempting to save new user: Raju
+02:24:28.015 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'text/plain', given [*/*] and supported [text/plain, */*, application/json, application/*+json]
+02:24:28.015 [http-nio-8080-exec-2] DEBUG o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing ["User created successfully"]
+02:24:28.022 [http-nio-8080-exec-2] DEBUG o.s.web.servlet.DispatcherServlet - Completed 201 CREATED
+02:24:28.023 [http-nio-8080-exec-2] DEBUG o.s.s.w.a.AnonymousAuthenticationFilter - Set SecurityContextHolder to anonymous SecurityContext
+02:28:00.649 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SpringBoot.JournalApp.Repository.UserRepositoryImplTests]: UserRepositoryImplTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:28:00.830 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.SpringBoot.JournalApp.JournalApplication for test class com.SpringBoot.JournalApp.Repository.UserRepositoryImplTests
+02:28:01.469 [main] INFO  c.S.J.R.UserRepositoryImplTests - Starting UserRepositoryImplTests using Java 21 with PID 29192 (started by abhij in C:\Users\abhij\OneDrive\Desktop\SpringBoot\JournalApp)
+02:28:01.470 [main] INFO  c.S.J.R.UserRepositoryImplTests - The following 1 profile is active: "dev"
+02:28:01.536 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@3a71c100
+02:28:02.551 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+02:28:02.654 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 95 ms. Found 3 MongoDB repository interfaces.
+02:28:03.436 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21+35-2513"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='sharma016abhijeet', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@4f486211, com.mongodb.Jep395RecordCodecProvider@51e3d37e, com.mongodb.KotlinCodecProvider@3a479fda]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.iu00ie1.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-kf69ke-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+02:28:03.438 [cluster-ClusterId{value='688fcd5b8897725ace6038aa', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017 to client view of cluster
+02:28:03.479 [cluster-ClusterId{value='688fcd5b8897725ace6038aa', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 to client view of cluster
+02:28:03.483 [cluster-ClusterId{value='688fcd5b8897725ace6038aa', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017 to client view of cluster
+02:28:04.214 [main] INFO  org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+02:28:04.260 [cluster-ClusterId{value='688fcd5b8897725ace6038aa', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=487706300, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000103, setVersion=290, topologyVersion=TopologyVersion{processId=6880629d5f6b6fb5635caf17, counter=9}, lastWriteDate=Mon Aug 04 02:28:06 IST 2025, lastUpdateTimeNanos=275025888022299}
+02:28:04.260 [cluster-ClusterId{value='688fcd5b8897725ace6038aa', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=486846100, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=6880639f11cd3b4f00e634f2, counter=5}, lastWriteDate=Mon Aug 04 02:28:06 IST 2025, lastUpdateTimeNanos=275025888151700}
+02:28:04.260 [cluster-ClusterId{value='688fcd5b8897725ace6038aa', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=481386701, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=688064cdaca27d2201bfc03a, counter=5}, lastWriteDate=Mon Aug 04 02:28:06 IST 2025, lastUpdateTimeNanos=275025888022299}
+02:28:04.266 [cluster-ClusterId{value='688fcd5b8897725ace6038aa', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 with max election id 7fffffff0000000000000103 and max set version 290
+02:28:05.548 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+02:28:05.793 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+02:28:05.905 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@278de2b2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1fc1c7e, org.springframework.security.web.context.SecurityContextHolderFilter@1f0e2bdc, org.springframework.security.web.header.HeaderWriterFilter@53f495f0, org.springframework.web.filter.CorsFilter@75cacb3e, org.springframework.security.web.authentication.logout.LogoutFilter@1201e064, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5f3f3d00, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@44a93f8a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@26463a6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@61957d9c, org.springframework.security.web.access.ExceptionTranslationFilter@60c98f25, org.springframework.security.web.access.intercept.AuthorizationFilter@7540160e]
+02:28:06.307 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+02:28:06.366 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+02:28:06.533 [main] INFO  c.S.J.R.UserRepositoryImplTests - Started UserRepositoryImplTests in 5.426 seconds (process running for 7.281)
+02:28:07.503 [SpringApplicationShutdownHook] DEBUG o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@3a71c100, started on Mon Aug 04 02:28:01 IST 2025
+02:31:25.178 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.SpringBoot.JournalApp.Repository.UserRepositoryImplTests]: UserRepositoryImplTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+02:31:25.324 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.SpringBoot.JournalApp.JournalApplication for test class com.SpringBoot.JournalApp.Repository.UserRepositoryImplTests
+02:31:25.926 [main] INFO  c.S.J.R.UserRepositoryImplTests - Starting UserRepositoryImplTests using Java 21 with PID 18660 (started by abhij in C:\Users\abhij\OneDrive\Desktop\SpringBoot\JournalApp)
+02:31:25.927 [main] INFO  c.S.J.R.UserRepositoryImplTests - The following 1 profile is active: "dev"
+02:31:25.970 [main] DEBUG o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@30af7377
+02:31:26.956 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+02:31:27.033 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 72 ms. Found 3 MongoDB repository interfaces.
+02:31:27.765 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"application": {"name": "Cluster0"}, "driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.11.2"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21+35-2513"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='sharma016abhijeet', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@421d54b3, com.mongodb.Jep395RecordCodecProvider@63f40ca0, com.mongodb.KotlinCodecProvider@4dad8ec0]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.iu00ie1.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-kf69ke-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='Cluster0', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null}
+02:31:27.782 [cluster-ClusterId{value='688fce271d134e0fabc4ed65', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017 to client view of cluster
+02:31:27.840 [cluster-ClusterId{value='688fce271d134e0fabc4ed65', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 to client view of cluster
+02:31:27.843 [cluster-ClusterId{value='688fce271d134e0fabc4ed65', description='Cluster0'}-srv-cluster0.iu00ie1.mongodb.net] INFO  org.mongodb.driver.cluster - Adding discovered server ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017 to client view of cluster
+02:31:28.504 [main] INFO  org.mongodb.driver.cluster - No server chosen by WritableServerSelector from cluster description ClusterDescription{type=REPLICA_SET, connectionMode=MULTIPLE, serverDescriptions=[ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}, ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=UNKNOWN, state=CONNECTING}]}. Waiting for 30000 ms before timing out
+02:31:28.776 [cluster-ClusterId{value='688fce271d134e0fabc4ed65', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=542455500, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az2'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000103, setVersion=290, topologyVersion=TopologyVersion{processId=6880629d5f6b6fb5635caf17, counter=9}, lastWriteDate=Mon Aug 04 02:31:31 IST 2025, lastUpdateTimeNanos=275230403268500}
+02:31:28.776 [cluster-ClusterId{value='688fce271d134e0fabc4ed65', description='Cluster0'}-ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=542451400, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az3'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=688064cdaca27d2201bfc03a, counter=5}, lastWriteDate=Mon Aug 04 02:31:31 IST 2025, lastUpdateTimeNanos=275230403255000}
+02:31:28.777 [cluster-ClusterId{value='688fce271d134e0fabc4ed65', description='Cluster0'}-ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=542595100, setName='atlas-kf69ke-shard-0', canonicalAddress=ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, hosts=[ac-w1jkw58-shard-00-00.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017, ac-w1jkw58-shard-00-01.iu00ie1.mongodb.net:27017], passives=[], arbiters=[], primary='ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='aps1-az1'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='AP_SOUTH_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=290, topologyVersion=TopologyVersion{processId=6880639f11cd3b4f00e634f2, counter=5}, lastWriteDate=Mon Aug 04 02:31:31 GMT+05:30 2025, lastUpdateTimeNanos=275230403254900}
+02:31:28.782 [cluster-ClusterId{value='688fce271d134e0fabc4ed65', description='Cluster0'}-ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017] INFO  org.mongodb.driver.cluster - Discovered replica set primary ac-w1jkw58-shard-00-02.iu00ie1.mongodb.net:27017 with max election id 7fffffff0000000000000103 and max set version 290
+02:31:30.145 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerMapping - 15 mappings in 'requestMappingHandlerMapping'
+02:31:30.430 [main] DEBUG o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+02:31:30.553 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7a3c99f1, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16b7e04a, org.springframework.security.web.context.SecurityContextHolderFilter@d7055be, org.springframework.security.web.header.HeaderWriterFilter@299a43d9, org.springframework.web.filter.CorsFilter@661db63e, org.springframework.security.web.authentication.logout.LogoutFilter@19ec5357, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2fa879ed, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@12a6e8ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@63b4b9c6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5cf2f5d6, org.springframework.security.web.access.ExceptionTranslationFilter@6921cfa, org.springframework.security.web.access.intercept.AuthorizationFilter@4f6fd101]
+02:31:30.923 [main] DEBUG o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+02:31:30.978 [main] DEBUG o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+02:31:31.169 [main] INFO  c.S.J.R.UserRepositoryImplTests - Started UserRepositoryImplTests in 5.567 seconds (process running for 7.602)
