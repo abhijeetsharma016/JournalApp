@@ -3,6 +3,7 @@ package com.SpringBoot.JournalApp.Service;
 import com.SpringBoot.JournalApp.Constants.Placeholders;
 import com.SpringBoot.JournalApp.api.response.WeatherResponse;
 import com.SpringBoot.JournalApp.cache.AppCache;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpMethod;
@@ -11,7 +12,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
+@Slf4j
 public class WeatherService {
+
     @Value("${weather.api.key}")
     private String apiKey;
 
@@ -19,42 +22,20 @@ public class WeatherService {
     private RestTemplate restTemplate;
 
     @Autowired
-    private AppCache appCache;
+    private RedisService redisService;
 
     public WeatherResponse getWeather(String city) {
-        try {
-            // Add null checks and logging
-            String weatherApiTemplate = AppCache.APP_Cache.get("weather_api");
-            if (weatherApiTemplate == null) {
-                System.err.println("Weather API template not found in cache");
-                return null;
-            }
-
-            if (apiKey == null || apiKey.isEmpty()) {
-                System.err.println("Weather API key is not configured");
-                return null;
-            }
-
-            String finalAPI = weatherApiTemplate.replace(Placeholders.CITY, city).replace(Placeholders.API_KEY, apiKey);
-            System.out.println("Making weather API call to: " + finalAPI.replace(apiKey, "***API_KEY***"));
-
+        WeatherResponse weatherResponse = redisService.get("weather_of_" + city, WeatherResponse.class);
+        if (weatherResponse != null) {
+            return weatherResponse;
+        } else {
+            String finalAPI = AppCache.APP_Cache.get("weather_api").replace(Placeholders.CITY, city).replace(Placeholders.API_KEY, apiKey);
             ResponseEntity<WeatherResponse> response = restTemplate.exchange(finalAPI, HttpMethod.GET, null, WeatherResponse.class);
             WeatherResponse body = response.getBody();
-
-            if (body != null && body.getCurrent() != null) {
-                System.out.println("Weather data retrieved successfully for " + city);
-                System.out.println("Temperature: " + body.getCurrent().getTemperature() + "°C");
-                System.out.println("Feels like: " + body.getCurrent().getFeelslike() + "°C");
-            } else {
-                System.err.println("Weather response body is null or current data is missing");
+            if (body != null) {
+                redisService.set("weather_of_" + city, body, 300L);
             }
-
             return body;
-        } catch (Exception e) {
-            System.err.println("Error fetching weather data for city: " + city);
-            System.err.println("Error message: " + e.getMessage());
-            e.printStackTrace();
-            return null;
         }
     }
 }
